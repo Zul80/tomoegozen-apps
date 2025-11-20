@@ -8,7 +8,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kanit:wght@600&display=swap" rel="stylesheet">
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @php
+        $viteManifest = public_path('build/manifest.json');
+        $fallbackCss = null;
+        $fallbackJs = null;
+
+        if (! file_exists($viteManifest)) {
+            $buildAssetsPath = public_path('build/assets');
+            if (is_dir($buildAssetsPath)) {
+                $cssMatches = glob($buildAssetsPath.'/app-*.css') ?: [];
+                $jsMatches = glob($buildAssetsPath.'/app-*.js') ?: [];
+
+                $fallbackCss = $cssMatches[0] ?? null;
+                $fallbackJs = $jsMatches[0] ?? null;
+            }
+        }
+    @endphp
+
+    @if (file_exists($viteManifest))
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @else
+        @if ($fallbackCss)
+            <link rel="stylesheet" href="{{ asset('build/assets/'.basename($fallbackCss)) }}">
+        @endif
+        @if ($fallbackJs)
+            <script type="module" src="{{ asset('build/assets/'.basename($fallbackJs)) }}" defer></script>
+        @endif
+    @endif
 </head>
 <body class="font-inter bg-gradient-to-b from-black via-gray-950 to-black text-white min-h-screen" x-data>
     <header class="sticky top-0 z-50 backdrop-blur bg-black/70 border-b border-white/5">
