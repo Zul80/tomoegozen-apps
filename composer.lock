@@ -1164,7 +1164,7 @@
                 "ably/ably-php": "^1.0",
                 "aws/aws-sdk-php": "^3.322.9",
                 "ext-gmp": "*",
-                "fakeRphp/faker": "^1.24",
+                "fakerphp/faker": "^1.24",
                 "guzzlehttp/promises": "^2.0.3",
                 "guzzlehttp/psr7": "^2.4",
                 "laravel/pint": "^1.18",
@@ -3217,7 +3217,7 @@
             "require-dev": {
                 "captainhook/plugin-composer": "^5.3",
                 "ergebnis/composer-normalize": "^2.45",
-                "fakeRphp/faker": "^1.24",
+                "fakerphp/faker": "^1.24",
                 "hamcrest/hamcrest-php": "^2.0",
                 "jangregor/phpstan-prophecy": "^2.1",
                 "mockery/mockery": "^1.6",
@@ -6056,16 +6056,16 @@
     ],
     "packages-dev": [
         {
-            "name": "fakeRphp/faker",
+            "name": "fakerphp/faker",
             "version": "v1.24.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/FakeRpHP/Faker.git",
+                "url": "https://github.com/FakerPHP/Faker.git",
                 "reference": "e0ee18eb1e6dc3cda3ce9fd97e5a0689a88a64b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FakeRpHP/Faker/zipball/e0ee18eb1e6dc3cda3ce9fd97e5a0689a88a64b5",
+                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/e0ee18eb1e6dc3cda3ce9fd97e5a0689a88a64b5",
                 "reference": "e0ee18eb1e6dc3cda3ce9fd97e5a0689a88a64b5",
                 "shasum": ""
             },
@@ -6113,8 +6113,8 @@
                 "fixtures"
             ],
             "support": {
-                "issues": "https://github.com/FakeRpHP/Faker/issues",
-                "source": "https://github.com/FakeRpHP/Faker/tree/v1.24.1"
+                "issues": "https://github.com/FakerPHP/Faker/issues",
+                "source": "https://github.com/FakerPHP/Faker/tree/v1.24.1"
             },
             "time": "2024-11-21T13:46:39+00:00"
         },
