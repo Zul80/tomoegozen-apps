@@ -1,0 +1,8 @@
+<svg width="900" height="900" viewBox="0 0 900 900" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="900" fill="#050505"/>
+  <circle cx="450" cy="350" r="200" fill="#111" stroke="#e11d48" stroke-width="16"/>
+  <rect x="200" y="540" width="500" height="120" rx="20" fill="#0f172a"/>
+  <text x="50%" y="360" text-anchor="middle" fill="#e11d48" font-family="Kanit" font-size="68">NEO</text>
+  <text x="50%" y="620" text-anchor="middle" fill="#ffffff" font-family="Inter" font-size="40" letter-spacing="10">TOKYO</text>
+</svg>
+

@@ -1,0 +1,8 @@
+<svg width="900" height="900" viewBox="0 0 900 900" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="900" fill="#010101"/>
+  <polygon points="150,700 450,200 750,700" fill="#111" stroke="#f43f5e" stroke-width="12"/>
+  <line x1="150" y1="700" x2="750" y2="700" stroke="#f43f5e" stroke-width="22"/>
+  <text x="50%" y="520" text-anchor="middle" fill="#ffffff" font-family="Kanit" font-size="56" letter-spacing="14">BLADE RUN</text>
+  <text x="50%" y="590" text-anchor="middle" fill="#f43f5e" font-family="Inter" font-size="32" letter-spacing="8">DROP 05</text>
+</svg>
+

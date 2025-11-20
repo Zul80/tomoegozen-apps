@@ -1,0 +1,14 @@
+<svg width="900" height="900" viewBox="0 0 900 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="50%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#facc15"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="900" fill="#020617"/>
+  <path d="M140 450 Q300 250 450 450 T760 450" fill="none" stroke="url(#neon)" stroke-width="30" stroke-linecap="round"/>
+  <text x="50%" y="40%" text-anchor="middle" fill="#f8fafc" font-size="72" font-family="Kanit" letter-spacing="18">SHIBUYA</text>
+  <text x="50%" y="50%" text-anchor="middle" fill="url(#neon)" font-size="42" font-family="Inter" letter-spacing="10">OVERDRIVE</text>
+</svg>
+

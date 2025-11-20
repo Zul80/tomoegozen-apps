@@ -1,0 +1,8 @@
+<svg width="900" height="900" viewBox="0 0 900 900" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="900" fill="#050505"/>
+  <circle cx="450" cy="450" r="320" fill="#0f0f0f" stroke="#f43f5e" stroke-width="18"/>
+  <path d="M200 500 C320 420, 580 420, 700 500" stroke="#f43f5e" stroke-width="28" fill="none" stroke-linecap="round"/>
+  <text x="50%" y="55%" text-anchor="middle" fill="#ffffff" font-family="Kanit, sans-serif" font-size="72">SAKURA</text>
+  <text x="50%" y="65%" text-anchor="middle" fill="#f43f5e" font-family="Kanit, sans-serif" font-size="38">BLADE DROP</text>
+</svg>
+
