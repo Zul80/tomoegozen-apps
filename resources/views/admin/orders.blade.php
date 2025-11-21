@@ -1,9 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('title', 'Admin Orders — Tomoe Gozen')
 
 @section('content')
-    <section class="max-w-6xl mx-auto px-4 py-12 space-y-8">
+    <section class="max-w-6xl mx-auto space-y-8">
         <header>
             <p class="text-white/60 uppercase tracking-[0.4em] text-[10px]">Admin</p>
             <h1 class="text-3xl font-semibold">Orders</h1>

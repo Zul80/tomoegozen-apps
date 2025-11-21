@@ -124,14 +124,27 @@ php artisan test
 
 ## 🛠️ Deployment Notes
 
+### ⚠️ PENTING: Setelah Deploy
+
+**Jika muncul error `MissingAppKeyException`:**
+```bash
+php artisan key:generate --force
+```
+
+### Langkah Deployment
+
 1. Provision PHP 8.2+, Composer, Node 18+, MySQL and configure env vars
-2. Run `php artisan migrate --seed` (preferrably via CI/CD task)
-3. Upload `storage` symlink (`php artisan storage:link`)
-4. For Render / DigitalOcean App Platform:
+2. **WAJIB:** Generate APP_KEY dengan `php artisan key:generate`
+3. Run `php artisan migrate --seed` (preferrably via CI/CD task)
+4. Upload `storage` symlink (`php artisan storage:link`)
+5. Build assets: `npm ci && npm run build`
+6. For Render / DigitalOcean App Platform:
    - Web service command: `php artisan serve --host=0.0.0.0 --port $PORT`
    - Background worker (optional) for queues: `php artisan queue:work`
    - Provide MySQL + Sanctum env vars in dashboard
-5. Invalidate caches after each deploy (`php artisan config:clear && php artisan route:clear`)
+7. Invalidate caches after each deploy (`php artisan config:clear && php artisan route:clear`)
+
+📖 **Panduan lengkap:** Lihat `DEPLOYMENT.md` dan `QUICK_FIX.md`
 
 ### Headless Option
 

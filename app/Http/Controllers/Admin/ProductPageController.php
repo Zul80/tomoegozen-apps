@@ -11,15 +11,16 @@ class ProductPageController extends Controller
 {
     public function index(Request $request)
     {
-        $products = Product::with('category')->paginate(15);
+        $products = Product::with('category', 'collection')->paginate(15);
         $categories = Category::all();
+        $collections = \App\Models\Collection::all();
 
         $editing = null;
         if ($editId = $request->query('edit')) {
             $editing = Product::find($editId);
         }
 
-        return view('admin.products', compact('products', 'categories', 'editing'));
+        return view('admin.products', compact('products', 'categories', 'collections', 'editing'));
     }
 }
 

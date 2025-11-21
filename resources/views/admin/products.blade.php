@@ -1,9 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('title', 'Admin Products — Tomoe Gozen')
 
 @section('content')
-    <section class="max-w-6xl mx-auto px-4 py-12 space-y-8">
+    <section class="max-w-6xl mx-auto space-y-8">
         <header class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
                 <p class="text-white/60 uppercase tracking-[0.4em] text-[10px]">Admin</p>
@@ -67,8 +67,13 @@
                     </select>
                 </label>
                 <label class="space-y-1">
-                    <span class="text-white/60">Collection ID</span>
-                    <input type="number" name="collection_id" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-2 normal-case">
+                    <span class="text-white/60">Collection</span>
+                    <select name="collection_id" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-2 normal-case">
+                        <option value="">None</option>
+                        @foreach ($collections as $collection)
+                            <option value="{{ $collection->id }}">{{ $collection->title }}</option>
+                        @endforeach
+                    </select>
                 </label>
                 <label class="space-y-1">
                     <span class="text-white/60">Image URL</span>
@@ -162,9 +167,15 @@
                         </select>
                     </label>
                     <label class="space-y-1">
-                        <span class="text-white/60">Collection ID</span>
-                        <input type="number" name="collection_id" value="{{ $editing->collection_id }}"
-                            class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-2 normal-case">
+                        <span class="text-white/60">Collection</span>
+                        <select name="collection_id" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-2 normal-case">
+                            <option value="">None</option>
+                            @foreach ($collections as $collection)
+                                <option value="{{ $collection->id }}" @selected($editing->collection_id === $collection->id)>
+                                    {{ $collection->title }}
+                                </option>
+                            @endforeach
+                        </select>
                     </label>
                     <label class="space-y-1">
                         <span class="text-white/60">Image URL</span>
